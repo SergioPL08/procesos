@@ -13,7 +13,7 @@ import java.io.InputStreamReader;
  *
  * @author sergio
  */
-public class Servicio {
+public class Pruebas {
 
     public static void printSon(Process proceso) throws IOException{
         BufferedReader read = new BufferedReader(new InputStreamReader(proceso.getInputStream()));
@@ -48,7 +48,7 @@ public class Servicio {
             }
         */
         //Actividad 2
-            
+          /*  
             try{
                 String acciones= "cmd.exe /c dir";
                 int contador=0;
@@ -67,7 +67,7 @@ public class Servicio {
                 System.out.println("Ta mal");
 
             }
-        
+        */
         //Deprecated
         /*
         if(args.length<=0){
