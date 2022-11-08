@@ -1,7 +1,6 @@
 package InterfazV2;
 
 
-import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDateTime;

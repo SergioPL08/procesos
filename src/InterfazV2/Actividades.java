@@ -3,24 +3,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package InterfazV2;
-
-import com.toedter.calendar.JDateChooser;
-import java.security.Timestamp;
 import javax.swing.table.DefaultTableModel;
 import util.Conexion;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.Iterator;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
-import util.TextPrompt;
 import zoo.Animal;
 import zoo.Cuidador;
 import zoo.Cuidados;
@@ -489,20 +483,20 @@ public class Actividades extends javax.swing.JFrame {
             Cuidador cuidador = new Cuidador((Cuidador)jComboBoxCuidador.getSelectedItem());
             Cuidados cuidado = new Cuidados((Cuidados)jComboBoxCuidado.getSelectedItem());
         
-            String sentencia = "UPDATE REALIZADA SET ID_ANIMAL="+ani.getId()+", ID_CUIDADOR="+cuidador.getId()+" AND ID_CUIDADO="+cuidado.getId()+" WHERE ID_TAREA="+id;
+            String sentencia = "UPDATE REALIZADA SET ID_ANIMAL="+ani.getId()+", ID_CUIDADOR="+cuidador.getId()+", ID_CUIDADO="+cuidado.getId()+", FECHA='"+dateTimeFormateado+"' WHERE ID_TAREA="+id;
             System.out.println(sentencia);
             if(miConexion.editTable(sentencia)==1){
                 String currentTimeStamp = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.0").format(dateTime);
-                modelo.setValueAt(ani.getName(), fila, 1);
-                modelo.setValueAt(cuidador.getNombre(), fila, 2);
-                modelo.setValueAt(cuidado.getNombre(), fila, 3);
-                modelo.setValueAt(dateTimeFormateado, fila, 3);
-                JOptionPane.showMessageDialog(null, "Animal editado correctamente");
+                modelo.setValueAt(ani, fila, 1);
+                modelo.setValueAt(cuidador, fila, 2);
+                modelo.setValueAt(cuidado, fila, 3);
+                modelo.setValueAt(fecha, fila, 4);
+                JOptionPane.showMessageDialog(null, "Tarea editada correctamente");
                 jDateChooser1.setDate(null);
                 jFormattedTextField1.setText("");
             }
             else{
-                JOptionPane.showMessageDialog(null, "Error al editar el animal");
+                JOptionPane.showMessageDialog(null, "Error al editar la tarea");
             }
         }
         

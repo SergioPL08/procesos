@@ -4,18 +4,10 @@
  */
 package Login;
 import InterfazV2.menuPrincipal;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
-import util.utilities;
-import zoo.User;
 import java.awt.Color;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import util.Conexion;
 /**
  *

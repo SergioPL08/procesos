@@ -83,8 +83,6 @@ public class addCuidadores extends javax.swing.JFrame {
 
         capa0 = new javax.swing.JPanel();
         addCuidador = new javax.swing.JLabel();
-        JLNombre = new javax.swing.JLabel();
-        jTFNombreCuidador = new javax.swing.JTextField();
         JLSalario = new javax.swing.JLabel();
         jTFTel = new javax.swing.JTextField();
         JLEspecialidad = new javax.swing.JLabel();
@@ -93,6 +91,8 @@ public class addCuidadores extends javax.swing.JFrame {
         JLApellidos = new javax.swing.JLabel();
         jTFApe = new javax.swing.JTextField();
         jSSalario = new javax.swing.JSpinner();
+        JLNombre = new javax.swing.JLabel();
+        jTFNombreCuidador = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTablaCuidadores = new javax.swing.JTable();
@@ -107,8 +107,8 @@ public class addCuidadores extends javax.swing.JFrame {
         capa0.setBackground(new java.awt.Color(255, 255, 255));
         capa0.setPreferredSize(new java.awt.Dimension(800, 600));
         java.awt.GridBagLayout capa0Layout = new java.awt.GridBagLayout();
-        capa0Layout.columnWidths = new int[] {0, 35, 0, 35, 0};
-        capa0Layout.rowHeights = new int[] {0, 32, 0, 32, 0, 32, 0, 32, 0, 32, 0, 32, 0};
+        capa0Layout.columnWidths = new int[] {0, 35, 0};
+        capa0Layout.rowHeights = new int[] {0, 32, 0, 32, 0, 32, 0, 32, 0, 32, 0};
         capa0.setLayout(capa0Layout);
 
         addCuidador.setBackground(new java.awt.Color(255, 255, 255));
@@ -121,24 +121,6 @@ public class addCuidadores extends javax.swing.JFrame {
         gridBagConstraints.gridy = 0;
         gridBagConstraints.gridwidth = 3;
         capa0.add(addCuidador, gridBagConstraints);
-
-        JLNombre.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        JLNombre.setForeground(new java.awt.Color(0, 153, 51));
-        JLNombre.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        JLNombre.setText("Nombre");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 2;
-        capa0.add(JLNombre, gridBagConstraints);
-
-        jTFNombreCuidador.setBackground(new java.awt.Color(255, 255, 255));
-        jTFNombreCuidador.setForeground(new java.awt.Color(0, 0, 0));
-        jTFNombreCuidador.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(41, 43, 45)), "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 0, 12), new java.awt.Color(0, 0, 0))); // NOI18N
-        jTFNombreCuidador.setPreferredSize(new java.awt.Dimension(100, 20));
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 2;
-        capa0.add(jTFNombreCuidador, gridBagConstraints);
 
         JLSalario.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         JLSalario.setForeground(new java.awt.Color(0, 153, 51));
@@ -207,6 +189,24 @@ public class addCuidadores extends javax.swing.JFrame {
         gridBagConstraints.gridy = 6;
         capa0.add(jSSalario, gridBagConstraints);
 
+        JLNombre.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        JLNombre.setForeground(new java.awt.Color(0, 153, 51));
+        JLNombre.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        JLNombre.setText("Nombre");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        capa0.add(JLNombre, gridBagConstraints);
+
+        jTFNombreCuidador.setBackground(new java.awt.Color(255, 255, 255));
+        jTFNombreCuidador.setForeground(new java.awt.Color(0, 0, 0));
+        jTFNombreCuidador.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(41, 43, 45)), "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 0, 12), new java.awt.Color(0, 0, 0))); // NOI18N
+        jTFNombreCuidador.setPreferredSize(new java.awt.Dimension(100, 20));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 2;
+        capa0.add(jTFNombreCuidador, gridBagConstraints);
+
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
         jTablaCuidadores.setModel(new javax.swing.table.DefaultTableModel(
@@ -259,8 +259,8 @@ public class addCuidadores extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addComponent(jScrollPane1)
+                .addContainerGap())
         );
 
         jToolBar1.setBackground(new java.awt.Color(204, 204, 204));
@@ -335,7 +335,7 @@ public class addCuidadores extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jToolBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(capa0, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(capa0, javax.swing.GroupLayout.PREFERRED_SIZE, 474, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
